@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8" />
+    <title>Formulario de cadastro de Noticia</title>
+  </head>
+  <body>
+    <h1>Adicionar noticia</h1>
+    <br />
+
+    <% if(validation) { %>
+    <ul>
+      <% for(let = 0; i < validation.length; i++) { %>
+      <li><% validation[i].msg %></li>
+      <% } %>
+    </ul>
+    <% } %>
+    <form action="/noticias/slvar" method="post">
+      <label>Titulo</label>
+      <input type="text" id="titulo" placeholder="Titulo da Noticia" />
+      <br />
+      <label>Resumo</label>
+      <input type="text" id="resumo" placeholder="Resumo da Noticia" />
+      <br />
+      <label>Autor</label>
+      <input type="text" id="autor" placeholder="Autor da Noticia" />
+      <br />
+      <label>Data</label>
+      <input type="date" id="data_noticia" placeholder="Data da Noticia" />
+      <br />
+      <label>Noticia</label>
+      <textarea name="noticia" id="noticia" cols="30" rows="5"></textarea>
+      <br />
+      <input type="submit" value="Enviar" />
+    </form>
+  </body>
+</html>
