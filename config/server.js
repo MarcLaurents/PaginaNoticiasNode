@@ -15,6 +15,7 @@ Consign()
   .include('app/routers')
   .then('config/dbConnection.js') // necessario apontar extensao (tipo do arquivo)
   .then('app/models')
+  .then('app/controllers')
   .into(app)
 
 module.exports = app
